@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8D48B"/>
+      <stop offset="30%" stop-color="#C8A961"/>
+      <stop offset="60%" stop-color="#BF9B30"/>
+      <stop offset="100%" stop-color="#A8893D"/>
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0E6B8"/>
+      <stop offset="100%" stop-color="#C8A961"/>
+    </linearGradient>
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8893D"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="velvet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B1A1A"/>
+      <stop offset="40%" stop-color="#6B0F0F"/>
+      <stop offset="100%" stop-color="#4A0808"/>
+    </linearGradient>
+    <linearGradient id="velvetHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B22222"/>
+      <stop offset="50%" stop-color="#8B1A1A"/>
+      <stop offset="100%" stop-color="#5C1010"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ====== CROWN (floating above chair) ====== -->
+  <g transform="translate(200, 52)">
+    <!-- Crown base band -->
+    <rect x="-42" y="30" width="84" height="14" rx="3" fill="url(#gold)"/>
+    <rect x="-42" y="30" width="84" height="5" rx="2" fill="url(#goldLight)" opacity="0.4"/>
+
+    <!-- Crown body -->
+    <path d="M-42 30 L-46 -10 L-24 10 L-10 -25 L0 12 L10 -25 L24 10 L46 -10 L42 30Z" fill="url(#gold)" stroke="url(#goldLight)" stroke-width="1.2"/>
+
+    <!-- Crown jewels -->
+    <circle cx="0" cy="10" r="4.5" fill="#C62828" stroke="#E8D48B" stroke-width="1.2"/>
+    <circle cx="-24" cy="8" r="3" fill="#1B5E20" stroke="#E8D48B" stroke-width="0.8"/>
+    <circle cx="24" cy="8" r="3" fill="#1B5E20" stroke="#E8D48B" stroke-width="0.8"/>
+    <circle cx="-10" cy="-6" r="2.5" fill="#0D47A1" stroke="#E8D48B" stroke-width="0.8"/>
+    <circle cx="10" cy="-6" r="2.5" fill="#0D47A1" stroke="#E8D48B" stroke-width="0.8"/>
+
+    <!-- Crown tip balls -->
+    <circle cx="-46" cy="-10" r="3.5" fill="url(#goldLight)"/>
+    <circle cx="-10" cy="-25" r="3.5" fill="url(#goldLight)"/>
+    <circle cx="10" cy="-25" r="3.5" fill="url(#goldLight)"/>
+    <circle cx="46" cy="-10" r="3.5" fill="url(#goldLight)"/>
+
+    <!-- Cross on center top -->
+    <line x1="0" y1="-38" x2="0" y2="-22" stroke="url(#goldLight)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-6" y1="-30" x2="6" y2="-30" stroke="url(#goldLight)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="0" cy="-38" r="2" fill="url(#goldLight)"/>
+
+    <!-- Pearls on band -->
+    <circle cx="-35" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="-23" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="-11" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="0" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="11" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="23" cy="37" r="2" fill="url(#goldLight)"/>
+    <circle cx="35" cy="37" r="2" fill="url(#goldLight)"/>
+  </g>
+
+  <!-- ====== THRONE / BARBER CHAIR ====== -->
+  <g transform="translate(200, 100)">
+
+    <!-- Chair back - tall arched shape -->
+    <path d="M-55 140 L-55 40 Q-55 -10 0 -20 Q55 -10 55 40 L55 140Z" fill="url(#velvet)" stroke="url(#gold)" stroke-width="2.5"/>
+
+    <!-- Inner arch highlight -->
+    <path d="M-45 135 L-45 45 Q-45 0 0 -8 Q45 0 45 45 L45 135Z" fill="url(#velvetHighlight)" opacity="0.4"/>
+
+    <!-- Tufted diamond pattern on backrest -->
+    <path d="M0 10 L15 30 L0 50 L-15 30Z" fill="none" stroke="url(#gold)" stroke-width="0.8" opacity="0.5"/>
+    <path d="M0 40 L15 60 L0 80 L-15 60Z" fill="none" stroke="url(#gold)" stroke-width="0.8" opacity="0.5"/>
+    <path d="M0 70 L15 90 L0 110 L-15 90Z" fill="none" stroke="url(#gold)" stroke-width="0.8" opacity="0.5"/>
+    <!-- Tufting buttons -->
+    <circle cx="0" cy="30" r="2" fill="url(#goldLight)" opacity="0.6"/>
+    <circle cx="0" cy="60" r="2" fill="url(#goldLight)" opacity="0.6"/>
+    <circle cx="0" cy="90" r="2" fill="url(#goldLight)" opacity="0.6"/>
+    <circle cx="15" cy="45" r="1.5" fill="url(#goldLight)" opacity="0.4"/>
+    <circle cx="-15" cy="45" r="1.5" fill="url(#goldLight)" opacity="0.4"/>
+    <circle cx="15" cy="75" r="1.5" fill="url(#goldLight)" opacity="0.4"/>
+    <circle cx="-15" cy="75" r="1.5" fill="url(#goldLight)" opacity="0.4"/>
+
+    <!-- Gold crown emblem on backrest -->
+    <g transform="translate(0, 115)" opacity="0.7">
+      <path d="M-12 0 L-13 -10 L-6 -4 L0 -14 L6 -4 L13 -10 L12 0Z" fill="url(#goldLight)"/>
+      <rect x="-12" y="0" width="24" height="4" rx="1" fill="url(#goldLight)"/>
+    </g>
+
+    <!-- Chair ornate frame top -->
+    <path d="M-60 -12 Q-60 -30 -40 -30 Q-20 -30 0 -24 Q20 -30 40 -30 Q60 -30 60 -12" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <!-- Finials on frame top -->
+    <circle cx="-60" cy="-12" r="5" fill="url(#goldLight)"/>
+    <circle cx="60" cy="-12" r="5" fill="url(#goldLight)"/>
+
+    <!-- Seat cushion -->
+    <rect x="-62" y="140" width="124" height="22" rx="8" fill="url(#velvet)" stroke="url(#gold)" stroke-width="2"/>
+    <rect x="-55" y="142" width="110" height="8" rx="4" fill="url(#velvetHighlight)" opacity="0.3"/>
+
+    <!-- Armrests -->
+    <!-- Left armrest -->
+    <path d="M-55 60 L-80 60 Q-90 60 -90 72 L-90 130 Q-90 140 -80 140 L-62 140" fill="url(#velvet)" stroke="url(#gold)" stroke-width="2"/>
+    <rect x="-92" y="56" width="40" height="12" rx="5" fill="url(#velvet)" stroke="url(#gold)" stroke-width="1.5"/>
+    <!-- Left armrest pad -->
+    <rect x="-88" y="58" width="32" height="8" rx="3" fill="#8B1A1A" opacity="0.5"/>
+
+    <!-- Right armrest -->
+    <path d="M55 60 L80 60 Q90 60 90 72 L90 130 Q90 140 80 140 L62 140" fill="url(#velvet)" stroke="url(#gold)" stroke-width="2"/>
+    <rect x="52" y="56" width="40" height="12" rx="5" fill="url(#velvet)" stroke="url(#gold)" stroke-width="1.5"/>
+    <!-- Right armrest pad -->
+    <rect x="56" y="58" width="32" height="8" rx="3" fill="#8B1A1A" opacity="0.5"/>
+
+    <!-- Gold ornament on armrest fronts -->
+    <circle cx="-90" cy="130" r="4" fill="url(#goldLight)"/>
+    <circle cx="90" cy="130" r="4" fill="url(#goldLight)"/>
+
+    <!-- Chair base / pedestal -->
+    <path d="M-40 162 L-30 185 L30 185 L40 162" fill="url(#goldDark)" stroke="url(#gold)" stroke-width="1.5"/>
+    <!-- Base column -->
+    <rect x="-15" y="185" width="30" height="15" rx="3" fill="url(#gold)"/>
+    <!-- Base plate -->
+    <ellipse cx="0" cy="205" rx="50" ry="8" fill="url(#goldDark)" stroke="url(#gold)" stroke-width="1.2"/>
+    <ellipse cx="0" cy="203" rx="45" ry="6" fill="url(#gold)" opacity="0.4"/>
+
+    <!-- Fringe / tassels under seat -->
+    <g transform="translate(0, 162)" opacity="0.7">
+      <line x1="-50" y1="0" x2="-50" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="-40" y1="0" x2="-40" y2="10" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="-30" y1="0" x2="-30" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="-20" y1="0" x2="-20" y2="10" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="-10" y1="0" x2="-10" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="10" y1="0" x2="10" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="20" y1="0" x2="20" y2="10" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="30" y1="0" x2="30" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="40" y1="0" x2="40" y2="10" stroke="url(#gold)" stroke-width="1.5"/>
+      <line x1="50" y1="0" x2="50" y2="8" stroke="url(#gold)" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- ====== DECORATIVE SEPARATOR ====== -->
+  <g transform="translate(200, 340)">
+    <line x1="-110" y1="0" x2="-18" y2="0" stroke="url(#gold)" stroke-width="1.2"/>
+    <line x1="18" y1="0" x2="110" y2="0" stroke="url(#gold)" stroke-width="1.2"/>
+    <path d="M-18 0 L-9 -5 L0 0 L9 -5 L18 0 L9 5 L0 0 L-9 5Z" fill="url(#goldLight)"/>
+  </g>
+
+  <!-- ====== TEXT: IMPERIAL ====== -->
+  <text x="200" y="380" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="bold" letter-spacing="12" fill="url(#gold)">
+    IMPERIAL
+  </text>
+
+  <!-- ====== TEXT: CUT ====== -->
+  <text x="200" y="418" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="normal" letter-spacing="18" fill="url(#goldLight)">
+    CUT
+  </text>
+
+  <!-- ====== TAGLINE ====== -->
+  <text x="200" y="450" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="5" fill="#C8A961" opacity="0.6">
+    PREMIUM BARBERSHOP
+  </text>
+
+  <!-- ====== BOTTOM ORNAMENT ====== -->
+  <g transform="translate(200, 465)">
+    <line x1="-45" y1="0" x2="-8" y2="0" stroke="url(#gold)" stroke-width="0.7" opacity="0.4"/>
+    <line x1="8" y1="0" x2="45" y2="0" stroke="url(#gold)" stroke-width="0.7" opacity="0.4"/>
+    <circle cx="0" cy="0" r="1.8" fill="url(#goldLight)" opacity="0.4"/>
+  </g>
+</svg>

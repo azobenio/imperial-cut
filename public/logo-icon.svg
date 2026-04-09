@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="ic1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8D48B"/>
+      <stop offset="50%" stop-color="#C8A961"/>
+      <stop offset="100%" stop-color="#A8893D"/>
+    </linearGradient>
+    <linearGradient id="ic2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0E6B8"/>
+      <stop offset="100%" stop-color="#C8A961"/>
+    </linearGradient>
+    <linearGradient id="ic3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B1A1A"/>
+      <stop offset="100%" stop-color="#4A0808"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Crown -->
+  <path d="M25 32 L22 12 L33 22 L42 5 L50 24 L58 5 L67 22 L78 12 L75 32Z" fill="url(#ic1)" stroke="url(#ic2)" stroke-width="0.8"/>
+  <rect x="25" y="32" width="50" height="8" rx="2" fill="url(#ic1)"/>
+  <!-- Crown jewels -->
+  <circle cx="50" cy="22" r="3" fill="#C62828" stroke="#E8D48B" stroke-width="0.8"/>
+  <circle cx="38" cy="20" r="2" fill="#1B5E20" stroke="#E8D48B" stroke-width="0.6"/>
+  <circle cx="62" cy="20" r="2" fill="#1B5E20" stroke="#E8D48B" stroke-width="0.6"/>
+  <!-- Cross -->
+  <line x1="50" y1="0" x2="50" y2="8" stroke="url(#ic2)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="46" y1="4" x2="54" y2="4" stroke="url(#ic2)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Pearls -->
+  <circle cx="32" cy="36" r="1.5" fill="url(#ic2)"/>
+  <circle cx="41" cy="36" r="1.5" fill="url(#ic2)"/>
+  <circle cx="50" cy="36" r="1.5" fill="url(#ic2)"/>
+  <circle cx="59" cy="36" r="1.5" fill="url(#ic2)"/>
+  <circle cx="68" cy="36" r="1.5" fill="url(#ic2)"/>
+
+  <!-- Chair back (arched) -->
+  <path d="M33 82 L33 55 Q33 43 50 42 Q67 43 67 55 L67 82Z" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1.5"/>
+  <!-- Tufting -->
+  <circle cx="50" cy="55" r="1.2" fill="url(#ic2)" opacity="0.5"/>
+  <circle cx="50" cy="65" r="1.2" fill="url(#ic2)" opacity="0.5"/>
+  <circle cx="50" cy="75" r="1.2" fill="url(#ic2)" opacity="0.5"/>
+  <!-- Small crown on backrest -->
+  <path d="M44 78 L43 73 L47 76 L50 70 L53 76 L57 73 L56 78Z" fill="url(#ic2)" opacity="0.5"/>
+
+  <!-- Armrests -->
+  <path d="M33 56 L24 56 Q20 56 20 62 L20 78 Q20 82 24 82 L33 82" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1.2"/>
+  <path d="M67 56 L76 56 Q80 56 80 62 L80 78 Q80 82 76 82 L67 82" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1.2"/>
+  <!-- Armrest pads -->
+  <rect x="22" y="53" width="14" height="6" rx="2.5" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1"/>
+  <rect x="64" y="53" width="14" height="6" rx="2.5" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1"/>
+
+  <!-- Seat -->
+  <rect x="30" y="82" width="40" height="8" rx="3" fill="url(#ic3)" stroke="url(#ic1)" stroke-width="1.2"/>
+
+  <!-- Base -->
+  <rect x="44" y="90" width="12" height="5" rx="1" fill="url(#ic1)"/>
+  <ellipse cx="50" cy="97" rx="18" ry="3" fill="url(#ic1)" opacity="0.7"/>
+</svg>
