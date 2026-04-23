@@ -3,6 +3,7 @@
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n-context";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -15,6 +16,8 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="bg-surface border-t border-border mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -33,20 +36,20 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted leading-relaxed">
-              Coupes premium hommes & enfants.
-              <br />A domicile ou en studio prive.
+              {t("footer.tagline1")}
+              <br />{t("footer.tagline2")}
             </p>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">
-              Contact
+              {t("footer.contact")}
             </h4>
             <div className="space-y-3 text-sm text-muted">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-gold" />
-                Ostende, Belgique
+                {t("hero.badge")}
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-gold" />
@@ -67,18 +70,18 @@ export function Footer() {
           {/* Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gold mb-4">
-              Navigation
+              {t("footer.nav")}
             </h4>
             <div className="space-y-2 text-sm text-muted">
-              <Link href="/#services" className="block hover:text-foreground transition-colors">Services & Tarifs</Link>
-              <Link href="/booking" className="block hover:text-foreground transition-colors">Reserver</Link>
-              <Link href="/#galerie" className="block hover:text-foreground transition-colors">Galerie</Link>
+              <Link href="/#services" className="block hover:text-foreground transition-colors">{t("services.tag")}</Link>
+              <Link href="/booking" className="block hover:text-foreground transition-colors">{t("nav.book")}</Link>
+              <Link href="/#galerie" className="block hover:text-foreground transition-colors">{t("gallery.tag")}</Link>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-6 text-center text-xs text-muted">
-          &copy; {new Date().getFullYear()} Imperial Cut — Ostende, Belgique
+          &copy; {new Date().getFullYear()} Imperial Cut — {t("hero.badge")}
         </div>
       </div>
     </footer>

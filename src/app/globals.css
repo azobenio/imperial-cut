@@ -46,3 +46,31 @@ html {
   background: var(--color-gold-dark);
   border-radius: 3px;
 }
+
+/* Hide scrollbar utility (for horizontal pickers) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Typography refinements */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Editorial image treatment — subtle warm cinematic feel */
+.img-editorial {
+  filter: contrast(1.05) saturate(0.95);
+}
+
+/* Smooth fade-in on mount for hero */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}

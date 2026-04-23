@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { BookingFlow } from "@/components/booking/BookingFlow";
+import { BookingHeader } from "@/components/booking/BookingHeader";
 
 export const metadata = {
   title: "Reserver | Imperial Cut",
@@ -9,13 +11,10 @@ export default function BookingPage() {
   return (
     <section className="min-h-screen pt-24 pb-16">
       <div className="max-w-2xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h1 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold">
-            Reserve ta <span className="text-gold">coupe</span>
-          </h1>
-          <p className="text-muted mt-2">3 etapes, moins de 30 secondes.</p>
-        </div>
-        <BookingFlow />
+        <BookingHeader />
+        <Suspense fallback={<div className="h-64 animate-pulse bg-surface rounded-2xl" />}>
+          <BookingFlow />
+        </Suspense>
       </div>
     </section>
   );

@@ -2,8 +2,11 @@
 
 import { services } from "@/lib/data";
 import { formatPrice, cn } from "@/lib/utils";
-import { Scissors, Sparkles, Paintbrush, Crown, Smile, Users, Check } from "lucide-react";
+import { Scissors, Sparkles, Paintbrush, Crown, Smile, Users, Check, Waves } from "lucide-react";
 import type { BookingData } from "./BookingFlow";
+import { useI18n } from "@/lib/i18n-context";
+import type { TranslationKey } from "@/lib/i18n";
+import { LookPicker } from "./LookPicker";
 
 const iconMap: Record<string, React.ReactNode> = {
   scissors: <Scissors className="w-5 h-5" />,
@@ -12,6 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
   crown: <Crown className="w-5 h-5" />,
   smile: <Smile className="w-5 h-5" />,
   users: <Users className="w-5 h-5" />,
+  waves: <Waves className="w-5 h-5" />,
 };
 
 type Props = {
@@ -21,14 +25,16 @@ type Props = {
 };
 
 export function StepService({ data, updateData, onNext }: Props) {
+  const { t } = useI18n();
+
   const handleSelect = (id: string) => {
     updateData({ serviceId: id });
   };
 
   return (
     <div>
-      <h2 className="text-lg font-semibold mb-1">Que veux-tu aujourd&apos;hui ?</h2>
-      <p className="text-sm text-muted mb-6">Choisis ton service.</p>
+      <h2 className="text-lg font-semibold mb-1">{t("book.what_today")}</h2>
+      <p className="text-sm text-muted mb-6">{t("book.choose_service")}</p>
 
       <div className="space-y-3">
         {services.map((s) => {
@@ -54,7 +60,7 @@ export function StepService({ data, updateData, onNext }: Props) {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold">{s.name}</span>
+                  <span className="font-semibold">{t(`svc.${s.id}` as TranslationKey)}</span>
                   {s.popular && (
                     <span className="text-[10px] bg-gold/20 text-gold px-2 py-0.5 rounded-full">
                       Top
@@ -62,12 +68,12 @@ export function StepService({ data, updateData, onNext }: Props) {
                   )}
                 </div>
                 <span className="text-xs text-muted">
-                  {s.description} &middot; {s.duration} min
+                  {t(`svc.${s.id}.desc` as TranslationKey)} &middot; {s.duration} min
                 </span>
               </div>
               <div className="text-right shrink-0">
                 <span className="text-sm font-bold text-gold">
-                  des {formatPrice(s.priceStudio)}
+                  {t("book.from")} {formatPrice(s.priceStudio)}
                 </span>
               </div>
               {selected && (
@@ -78,12 +84,21 @@ export function StepService({ data, updateData, onNext }: Props) {
         })}
       </div>
 
+      {/* Book Your Look — signature feature */}
+      {data.serviceId && (
+        <LookPicker
+          selectedLookId={data.lookId}
+          onSelect={(lookId) => updateData({ lookId })}
+          serviceId={data.serviceId}
+        />
+      )}
+
       <button
         disabled={!data.serviceId}
         onClick={onNext}
         className="w-full mt-6 bg-gold text-background py-3.5 rounded-full font-semibold text-sm hover:bg-gold-light transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
       >
-        Continuer
+        {t("book.continue")}
       </button>
     </div>
   );

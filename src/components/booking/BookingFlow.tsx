@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import { StepService } from "./StepService";
 import { StepLocation } from "./StepLocation";
 import { StepDateTime } from "./StepDateTime";
 import { StepConfirm } from "./StepConfirm";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n-context";
+import type { TranslationKey } from "@/lib/i18n";
+import { services, lookBook } from "@/lib/data";
 
 export type BookingData = {
   serviceId: string;
@@ -15,13 +19,34 @@ export type BookingData = {
   time: string;
   name: string;
   phone: string;
+  lookId?: string;
 };
 
-const steps = ["Service", "Lieu", "Creneau", "Confirmation"];
+const stepKeys: TranslationKey[] = [
+  "book.step_service",
+  "book.step_location",
+  "book.step_datetime",
+  "book.step_confirm",
+];
 
 export function BookingFlow() {
+  const { t } = useI18n();
+  const searchParams = useSearchParams();
+
+  // Pre-fill service + look from URL on first render (deep-link from gallery / signature card)
+  const [data, setData] = useState<Partial<BookingData>>(() => {
+    const init: Partial<BookingData> = {};
+    const serviceParam = searchParams.get("service");
+    const lookParam = searchParams.get("look");
+    if (serviceParam && services.some((s) => s.id === serviceParam)) {
+      init.serviceId = serviceParam;
+    }
+    if (lookParam && lookBook.some((l) => l.id === lookParam)) {
+      init.lookId = lookParam;
+    }
+    return init;
+  });
   const [step, setStep] = useState(0);
-  const [data, setData] = useState<Partial<BookingData>>({});
 
   const updateData = useCallback((partial: Partial<BookingData>) => {
     setData((prev) => ({ ...prev, ...partial }));
@@ -34,8 +59,8 @@ export function BookingFlow() {
     <div>
       {/* Progress */}
       <div className="flex items-center justify-between mb-10">
-        {steps.map((label, i) => (
-          <div key={label} className="flex items-center flex-1">
+        {stepKeys.map((key, i) => (
+          <div key={key} className="flex items-center flex-1">
             <div className="flex flex-col items-center flex-1">
               <div
                 className={cn(
@@ -53,10 +78,10 @@ export function BookingFlow() {
                   i <= step ? "text-gold" : "text-muted"
                 )}
               >
-                {label}
+                {t(key)}
               </span>
             </div>
-            {i < steps.length - 1 && (
+            {i < stepKeys.length - 1 && (
               <div
                 className={cn(
                   "h-0.5 flex-1 mx-2 transition-colors",
