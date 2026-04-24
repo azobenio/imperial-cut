@@ -1,8 +1,16 @@
-# Imperial Cut
+<p align="center">
+  <a href="https://imperial-cut.vercel.app">
+    <img src="public/gallery/coup20.jpeg" alt="Imperial Cut — hero" width="100%" />
+  </a>
+</p>
 
-Premium barbershop booking site — mobile & studio privé à Ostende, Belgique.
+<h1 align="center">Imperial Cut</h1>
 
-**Live** → [imperial-cut.vercel.app](https://imperial-cut.vercel.app)
+<p align="center">
+  Premium barbershop booking site — mobile &amp; studio privé à Ostende, Belgique.
+  <br />
+  <a href="https://imperial-cut.vercel.app"><strong>imperial-cut.vercel.app »</strong></a>
+</p>
 
 ---
 
