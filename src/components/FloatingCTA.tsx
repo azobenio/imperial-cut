@@ -12,8 +12,8 @@ export function FloatingCTA() {
   const pathname = usePathname();
   const { t } = useI18n();
 
-  // Hide on the booking page itself
-  const isBookingPage = pathname?.startsWith("/booking");
+  // Hide on the booking and shop pages
+  const isBookingPage = pathname?.startsWith("/booking") || pathname?.startsWith("/shop");
 
   useEffect(() => {
     if (isBookingPage) return;

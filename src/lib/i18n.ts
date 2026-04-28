@@ -11,6 +11,7 @@ export const translations = {
   "nav.services": { fr: "Services", en: "Services", nl: "Diensten" },
   "nav.about": { fr: "A propos", en: "About", nl: "Over ons" },
   "nav.gallery": { fr: "Galerie", en: "Gallery", nl: "Galerij" },
+  "nav.shop": { fr: "Boutique", en: "Shop", nl: "Shop" },
   "nav.book": { fr: "Reserver", en: "Book now", nl: "Reserveren" },
 
   // Hero
@@ -184,6 +185,40 @@ export const translations = {
   "book.success_title": { fr: "Reservation confirmee !", en: "Booking confirmed!", nl: "Reservering bevestigd!" },
   "book.success_msg": { fr: "Tu recevras un message de confirmation par WhatsApp.", en: "You'll receive a confirmation via WhatsApp.", nl: "Je ontvangt een bevestiging via WhatsApp." },
   "book.back_home": { fr: "Retour a l'accueil", en: "Back to home", nl: "Terug naar home" },
+
+  // Boutique — The Imperial Atelier
+  "shop.tag": { fr: "The Imperial Atelier", en: "The Imperial Atelier", nl: "The Imperial Atelier" },
+  "shop.title1": { fr: "L'edit ", en: "The ", nl: "De " },
+  "shop.title2": { fr: "signature.", en: "signature edit.", nl: "signature edit." },
+  "shop.desc": {
+    fr: "Une selection curatee de parfums et de sneakers premium, disponible au studio.",
+    en: "A curated selection of premium fragrances and sneakers, available in studio.",
+    nl: "Een gecureerde selectie van premium parfums en sneakers, beschikbaar in de studio.",
+  },
+  "shop.filter_all": { fr: "Tout", en: "All", nl: "Alles" },
+  "shop.filter_perfume": { fr: "Parfums", en: "Fragrances", nl: "Parfums" },
+  "shop.filter_shoes": { fr: "Chaussures", en: "Footwear", nl: "Schoenen" },
+  "shop.section_perfumes_title": { fr: "Parfums", en: "Fragrances", nl: "Parfums" },
+  "shop.section_perfumes_desc": {
+    fr: "Six signatures choisies pour leur sillage et leur tenue.",
+    en: "Six signature scents chosen for sillage and longevity.",
+    nl: "Zes signature geuren gekozen voor sillage en houdbaarheid.",
+  },
+  "shop.section_shoes_title": { fr: "Chaussures", en: "Footwear", nl: "Schoenen" },
+  "shop.section_shoes_desc": {
+    fr: "Cinq paires polyvalentes, du sneaker premium au mocassin.",
+    en: "Five versatile pairs, from premium sneaker to loafer.",
+    nl: "Vijf veelzijdige paren, van premium sneaker tot mocassin.",
+  },
+  "shop.available_studio": { fr: "Disponible au studio", en: "Available in studio", nl: "Beschikbaar in studio" },
+  "shop.ask": { fr: "Demander info", en: "Request info", nl: "Info opvragen" },
+  "shop.ask_whatsapp": { fr: "Demander sur WhatsApp", en: "Ask on WhatsApp", nl: "Vraag via WhatsApp" },
+  "shop.cta_title": { fr: "Une question, une taille, une demande speciale ?", en: "A question, a size, a special request?", nl: "Een vraag, een maat, een speciale wens?" },
+  "shop.cta_desc": {
+    fr: "Ecris-moi sur WhatsApp — je te reponds vite.",
+    en: "Message me on WhatsApp — I reply fast.",
+    nl: "Stuur me een bericht op WhatsApp — ik reageer snel.",
+  },
 
   // Footer
   "footer.tagline1": { fr: "Coupes premium hommes & enfants.", en: "Premium men's & kids cuts.", nl: "Premium heren- & kinderkapsels." },

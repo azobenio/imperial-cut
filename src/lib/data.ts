@@ -179,3 +179,115 @@ export const deliveryZones = {
   free: { label: "Ostende centre (< 5 km)", supplement: 0 },
   paid: { label: "Ostende elargi (5-15 km)", supplement: 5 },
 };
+
+// Boutique — "The Imperial Atelier"
+// Selection curatee dispo au studio. Prix indicatifs.
+export type ShopCategory = "perfume" | "shoes";
+
+export interface ShopItem {
+  id: string;
+  category: ShopCategory;
+  name: string; // editorial name
+  brand?: string;
+  description: string;
+  price: number; // EUR
+  image: string;
+  badge?: string; // "Edition limitee", "Best-seller"...
+}
+
+export const shopItems: ShopItem[] = [
+  // Parfums
+  {
+    id: "imperial-noir",
+    category: "perfume",
+    name: "Imperial Noir",
+    description: "Oud, ambre noir, cuir. Sillage profond, longue tenue.",
+    price: 89,
+    image: "/shop/perfumes/p1.jpeg",
+    badge: "Best-seller",
+  },
+  {
+    id: "oud-royal",
+    category: "perfume",
+    name: "Oud Royal",
+    description: "Oud rare, rose damascena, safran. Edition signature.",
+    price: 120,
+    image: "/shop/perfumes/p2.jpeg",
+    badge: "Edition limitee",
+  },
+  {
+    id: "marine-ostende",
+    category: "perfume",
+    name: "Marine d'Ostende",
+    description: "Embruns, bergamote, vetiver. L'esprit cote belge.",
+    price: 75,
+    image: "/shop/perfumes/p3.jpeg",
+  },
+  {
+    id: "velvet-amber",
+    category: "perfume",
+    name: "Velvet Amber",
+    description: "Ambre, vanille bourbon, tonka. Chaleur enveloppante.",
+    price: 85,
+    image: "/shop/perfumes/p4.jpeg",
+  },
+  {
+    id: "citrus-belge",
+    category: "perfume",
+    name: "Citrus Belge",
+    description: "Yuzu, neroli, the vert. Frais, lumineux, signature jour.",
+    price: 70,
+    image: "/shop/perfumes/p5.jpeg",
+  },
+  {
+    id: "sable-dore",
+    category: "perfume",
+    name: "Sable Dore",
+    description: "Iris, cedre, musc dore. Elegance discrete.",
+    price: 95,
+    image: "/shop/perfumes/p6.jpeg",
+  },
+
+  // Chaussures
+  {
+    id: "the-statement",
+    category: "shoes",
+    name: "The Statement",
+    description: "Sneaker premium cuir blanc. Coupe sobre, finition main.",
+    price: 180,
+    image: "/shop/shoes/c1.jpeg",
+    badge: "Best-seller",
+  },
+  {
+    id: "court-royale",
+    category: "shoes",
+    name: "Court Royale",
+    description: "Court classique, cuir grain. Polyvalence absolue.",
+    price: 160,
+    image: "/shop/shoes/c2.jpeg",
+  },
+  {
+    id: "the-loafer",
+    category: "shoes",
+    name: "The Loafer",
+    description: "Mocassin daim, semelle souple. Chic decontracte.",
+    price: 145,
+    image: "/shop/shoes/c3.jpeg",
+  },
+  {
+    id: "the-runner",
+    category: "shoes",
+    name: "The Runner",
+    description: "Runner technique, mesh respirant. Confort city.",
+    price: 135,
+    image: "/shop/shoes/c4.jpeg",
+  },
+  {
+    id: "the-classic",
+    category: "shoes",
+    name: "The Classic",
+    description: "Sneaker noir bas. Le passe-partout signature.",
+    price: 150,
+    image: "/shop/shoes/c5.jpeg",
+  },
+];
