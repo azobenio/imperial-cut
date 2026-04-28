@@ -9,7 +9,7 @@ import { ShoppingBag, MessageCircle, Sparkles, Footprints } from "lucide-react";
 
 type Filter = "all" | ShopCategory;
 
-const WHATSAPP_NUMBER = "32484000000"; // placeholder — a remplacer par le vrai numero
+const WHATSAPP_NUMBER = "32467635724"; // Denzel
 
 export function ShopGrid() {
   const { t } = useI18n();

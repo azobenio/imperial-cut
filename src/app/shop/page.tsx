@@ -4,7 +4,7 @@ import { ShopGrid } from "@/components/shop/ShopGrid";
 import { useI18n } from "@/lib/i18n-context";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "32484000000";
+const WHATSAPP_NUMBER = "32467635724"; // Denzel
 
 export default function ShopPage() {
   const { t } = useI18n();
