@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { MusicToggle } from "@/components/MusicToggle";
 import { I18nProvider } from "@/lib/i18n-context";
 
 const outfit = Outfit({
@@ -44,6 +45,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <FloatingCTA />
+          <MusicToggle />
         </I18nProvider>
       </body>
     </html>
